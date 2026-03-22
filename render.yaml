@@ -1,11 +1,12 @@
 services:
   - type: web
-    name: hacker-simulator-bot
+    name: sea-battle-bot
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python bot.py & python web_server.py
+    startCommand: python web_server.py & python bot.py
     envVars:
       - key: BOT_TOKEN
         sync: false
       - key: WEB_APP_URL
-        value: https://hacker-simulator-bot.onrender.com
+        value: https://sea-battle-bot.onrender.com
+    healthCheckPath: /
