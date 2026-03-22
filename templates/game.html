@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морской бой</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu">
+            <h1>⚓ Морской бой ⚓</h1>
+            <div class="menu-buttons">
+                <button onclick="showCreateGame()">👥 Играть с другом</button>
+                <button onclick="startBotGame()">🤖 Играть с ботом</button>
+                <button onclick="quickStart()">⚡ Быстрый старт</button>
+            </div>
+            <div class="join-form" id="joinForm" style="display: none;">
+                <input type="text" id="gameId" placeholder="Введите ID игры">
+                <input type="text" id="playerName" placeholder="Ваше имя">
+                <button onclick="joinGame()">Присоединиться</button>
+                <button onclick="hideJoinForm()">Отмена</button>
+            </div>
+        </div>
+
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="player-info">
+                <h3>Ваше поле</h3>
+                <div class="board" id="yourBoard"></div>
+            </div>
+            <div class="game-status" id="gameStatus">
+                <h3>Ожидание...</h3>
+            </div>
+            <div class="opponent-info">
+                <h3>Поле противника</h3>
+                <div class="board" id="opponentBoard"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
