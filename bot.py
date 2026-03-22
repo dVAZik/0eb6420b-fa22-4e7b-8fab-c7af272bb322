@@ -11,7 +11,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
-WEB_APP_URL = os.getenv('WEB_APP_URL', 'https://hacker-simulator-bot.onrender.com')
+WEB_APP_URL = os.getenv('WEB_APP_URL', 'https://sea-battle-bot.onrender.com')
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
